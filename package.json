@@ -6,6 +6,8 @@
   },
   "dependencies": {
     "cssnano": "^3.10.0",
+    "glamor": "^2.20.25",
+    "glamorous": "^3.23.2",
     "next": "beta",
     "postcss-cssnext": "^2.11.0",
     "postcss-loader": "^2.0.5",
