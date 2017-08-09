@@ -2,27 +2,31 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import {
-  Title,
-  Hero,
+  HeroWrapper,
   HeroContent,
 } from './styles';
 
 import Shadow from '../Shadow';
 import Image from '../Image';
 
-const HomeHero = ({ title }) => (
-  <Hero>
-    <HeroContent>
-      <Title measure="large">{ title }</Title>
-    </HeroContent>
+const Hero = ({ children, imageUrl }) => (
+  <HeroWrapper>
+    { children && <HeroContent>
+      { children }
+    </HeroContent> }
 
-    <Image src="/static/images/home-hero.jpg" absolute />
+    <Image src={ imageUrl } absolute />
     <Shadow />
-  </Hero>
+  </HeroWrapper>
 );
 
-HomeHero.propTypes = {
-  title: PropTypes.string.isRequired,
+Hero.defaultProps = {
+  children: null,
 };
 
-export default HomeHero;
+Hero.propTypes = {
+  children: PropTypes.element,
+  imageUrl: PropTypes.string.isRequired,
+};
+
+export default Hero;

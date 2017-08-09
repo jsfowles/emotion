@@ -24,9 +24,9 @@ export const PAGE_WRAPPER_SPACING_DESKTOP_HD = '7vw';
 export const PAGE_WRAPPER_SPACING_DESKTOP = PAGE_WRAPPER_SPACING_DESKTOP_HD;
 export const PAGE_WRAPPER_SPACING_MOBILE = PAGE_WRAPPER_SPACING_DESKTOP_HD;
 
-export const X_LARGE_MOBILE = 108;
-export const X_LARGE_DESKTOP = 120;
-export const X_LARGE_DESKTOP_HD = 132;
+export const X_LARGE_MOBILE = 144;
+export const X_LARGE_DESKTOP = 156;
+export const X_LARGE_DESKTOP_HD = 168;
 
 export const LARGE_MOBILE = 54;
 export const LARGE_DESKTOP = 60;

@@ -1,18 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Hero renders 1`] = `
+exports[`Hero renders with children 1`] = `
 <section
   className="css-5xtxfz"
 >
   <div
-    className="css-qzfvhr"
+    className="css-1oa2u7k"
   >
-    <h1
-      className="css-1it4wle"
-    >
-      test
+    <h1>
+      Test
     </h1>
   </div>
+  <img
+    alt={null}
+    className="css-1lgcqub"
+    onLoad={null}
+    src={null}
+    style={null}
+  />
+  <div
+    className="css-yew1ls"
+  />
+</section>
+`;
+
+exports[`Hero renders without children 1`] = `
+<section
+  className="css-5xtxfz"
+>
   <img
     alt={null}
     className="css-1lgcqub"
