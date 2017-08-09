@@ -2,6 +2,18 @@
  * Colors:
  */
 export const colors = {
+  nfBlack: '#221f1f',
+  nfRed: '#e50914',
+  nfTan: '#f5f5f1',
+
+  black001: '#221F1F',
+  black002: '#424040',
+  black003: '#696868',
+  black004: '#8c8c8c',
+  black005: '#a6a6a6',
+  black006: '#c7c7c7',
+  black007: '#dbdbdb',
+  black008: '#ebebeb',
 };
 
 /*
@@ -61,7 +73,7 @@ export const DESKTOP_HD = '@media (min-width: 1440px)';
  * TODO(RB): Lets write a rem calculator that we pass in to components to
  *           convert px values to rem.
  */
-export const FONT_FAMILY_SANS_SERIF = '"SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif';
+export const FONT_FAMILY_SANS_SERIF = 'Gotham, “Helvetica Neue”, Helvetica, Arial, sans-serif';
 export const FONT_FAMILY_SERIF = '"Courier New", monospace, serif';
 export const FONT_FAMILY_BASE = FONT_FAMILY_SANS_SERIF;
 export const FONT_COLOR_BASE = '#333';

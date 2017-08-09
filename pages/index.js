@@ -7,7 +7,7 @@ export default () => (
   <Main spacing={{ padding: 'vertical-xl' }}>
     <Section>
       <TextWrapper>
-        <H1 spacing={{ margin: 'bottom-lg' }}>Welcome to Belly</H1>
+        <H1 spacing={{ margin: 'bottom-lg' }}>We are Netflix</H1>
       </TextWrapper>
     </Section>
   </Main>
