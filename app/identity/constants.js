@@ -70,7 +70,7 @@ export const FONT_WEIGHT_BOLD = 600;
 
 export const MEASURE_SMALL = '35rem';
 export const MEASURE_MEDIUM = '45rem';
-export const MEASURE_LARGE = '60rem';
+export const MEASURE_LARGE = '85rem';
 
 export const LINE_HEIGHT_BASE = 1.75;
 export const FONT_WEIGHT_BASE = FONT_WEIGHT_LIGHT;

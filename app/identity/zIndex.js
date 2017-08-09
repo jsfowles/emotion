@@ -12,3 +12,5 @@ const index = {
 };
 
 export const HEADER = index.Z_INDEX_9;
+
+export const HOME_HERO_CONTENT = index.Z_INDEX_1;

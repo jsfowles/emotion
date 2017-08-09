@@ -1,8 +1,4 @@
-import React from 'react';
 import Setup from '../app/containers/Setup';
-
-import { Main } from '../app/identity/wrappers';
-
-const WeAreNetflix = () => <Main />;
+import WeAreNetflix from '../app/views/WeAreNetflix';
 
 export default Setup(WeAreNetflix);
