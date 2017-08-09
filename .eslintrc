@@ -15,7 +15,8 @@
     "window": true,
     "document": true,
     "localStorage": true,
-    "SPACE": true,
-    "TOKEN": true,
+    "test": true,
+    "expect": true,
+    "describe": true,
   }
 }

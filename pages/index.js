@@ -1,14 +1,8 @@
 import React from 'react';
+import Setup from '../app/containers/Setup';
 
-import { H1 } from '../app/identity/type';
-import { TextWrapper, Main, Section } from '../app/identity/wrappers';
+import { Main } from '../app/identity/wrappers';
 
-export default () => (
-  <Main spacing={{ padding: 'vertical-xl' }}>
-    <Section>
-      <TextWrapper>
-        <H1 spacing={{ margin: 'bottom-lg' }}>We are Netflix</H1>
-      </TextWrapper>
-    </Section>
-  </Main>
-);
+const WeAreNetflix = () => <Main />;
+
+export default Setup(WeAreNetflix);

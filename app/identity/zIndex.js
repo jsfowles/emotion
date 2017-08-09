@@ -10,3 +10,5 @@ const index = {
   Z_INDEX_9: '900',
   Z_INDEX_10: '1000',
 };
+
+export const HEADER = index.Z_INDEX_9;

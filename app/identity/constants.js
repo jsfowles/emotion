@@ -14,19 +14,8 @@ export const colors = {
   black006: '#c7c7c7',
   black007: '#dbdbdb',
   black008: '#ebebeb',
+  white: '#ffffff',
 };
-
-/*
- * Navigation:
- */
-export const LOGO_WIDTH_MOBILE = 130;
-export const LOGO_HEIGHT_MOBILE = LOGO_WIDTH_MOBILE * 0.297;
-
-export const LOGO_WIDTH_DESKTOP = 200;
-export const LOGO_HEIGHT_DESKTOP = LOGO_WIDTH_DESKTOP * 0.297;
-
-export const LOGO_WIDTH_DESKTOP_HD = 200;
-export const LOGO_HEIGHT_DESKTOP_HD = LOGO_WIDTH_DESKTOP_HD * 0.297;
 
 /*
  * Spacing:
@@ -58,8 +47,6 @@ export const X_SMALL_DESKTOP_HD = 17;
 /*
  * Screen sizes:
  *
- * TODO(RB): write a better reason
- *
  * For our screen sizes we go with min width, meaning that we start with
  * mobile styles an go up.
  */
@@ -69,14 +56,11 @@ export const DESKTOP_HD = '@media (min-width: 1440px)';
 /*
  * Typography styles
  *
- * TODO(RB): Write a description
- * TODO(RB): Lets write a rem calculator that we pass in to components to
- *           convert px values to rem.
  */
 export const FONT_FAMILY_SANS_SERIF = 'Gotham, “Helvetica Neue”, Helvetica, Arial, sans-serif';
 export const FONT_FAMILY_SERIF = '"Courier New", monospace, serif';
 export const FONT_FAMILY_BASE = FONT_FAMILY_SANS_SERIF;
-export const FONT_COLOR_BASE = '#333';
+export const FONT_COLOR_BASE = colors.black001;
 
 export const FONT_COLOR_MUTED = '#666';
 

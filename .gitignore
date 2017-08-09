@@ -6,3 +6,4 @@ npm-debug.log
 .next
 yarn-error.log
 yarn.lock
+coverage

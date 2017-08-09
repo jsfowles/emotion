@@ -33,7 +33,6 @@ export default class MyDocument extends Document {
           <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
           <style dangerouslySetInnerHTML={{ __html: this.props.css }} />
           <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon" />
-          <title>We are Netflix</title>
         </Head>
 
         <body>

@@ -2,7 +2,10 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "./node_modules/.bin/eslint ./app",
+    "jest": "jest",
+    "test": "npm run lint && npm run jest"
   },
   "dependencies": {
     "axios": "^0.16.2",
