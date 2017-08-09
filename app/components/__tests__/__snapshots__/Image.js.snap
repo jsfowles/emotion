@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Image renders 1`] = `
+<img
+  alt={null}
+  className="css-1p3alxs"
+  onLoad={null}
+  src={null}
+  style={null}
+/>
+`;

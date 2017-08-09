@@ -6,7 +6,7 @@ exports[`Layout renders the child wrapped in the layout 1`] = `
     className="css-1uhmsm5"
   >
     <a
-      className="css-10ge0og"
+      className="css-flwujd"
     >
       <svg
         height="192"
@@ -22,7 +22,7 @@ exports[`Layout renders the child wrapped in the layout 1`] = `
       </svg>
     </a>
     <nav
-      className="css-1fw4n46"
+      className="css-5osg3l"
     >
       <a
         className="css-1ibwuiw"
@@ -49,6 +49,11 @@ exports[`Layout renders the child wrapped in the layout 1`] = `
       >
         Benefits
       </a>
+      <button
+        className="css-zu2tl"
+      >
+        Search Jobs
+      </button>
     </nav>
     <div
       className="css-yew1ls"

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import {
   Title,
@@ -9,7 +10,7 @@ import {
 import Shadow from '../Shadow';
 import Image from '../Image';
 
-export default ({ title }) => (
+const HomeHero = ({ title }) => (
   <Hero>
     <HeroContent>
       <Title measure="large">{ title }</Title>
@@ -19,3 +20,9 @@ export default ({ title }) => (
     <Shadow />
   </Hero>
 );
+
+HomeHero.propTypes = {
+  title: PropTypes.string.isRequired,
+};
+
+export default HomeHero;

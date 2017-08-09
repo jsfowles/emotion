@@ -8,6 +8,7 @@ import {
   Header,
   Nav,
   NavLink,
+  SearchJobsBtn,
 } from './styles';
 
 export default () => (
@@ -22,6 +23,10 @@ export default () => (
       <NavLink>Locations</NavLink>
       <NavLink>Inclusion & Diversity</NavLink>
       <NavLink>Benefits</NavLink>
+
+      <SearchJobsBtn>
+        Search Jobs
+      </SearchJobsBtn>
     </Nav>
 
     <Shadow />
