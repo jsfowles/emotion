@@ -19,7 +19,7 @@
     "glamorous": "^3.23.4",
     "immutable": "^3.8.1",
     "marksy": "^4.0.0",
-    "next": "beta",
+    "next": "5.0.0",
     "postcss-cssnext": "^3.0.2",
     "postcss-loader": "^2.0.6",
     "postcss-modules": "^0.8.0",
