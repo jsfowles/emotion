@@ -1,4 +1,4 @@
 import Setup from '../app/containers/Setup';
-import WeAreNetflix from '../app/views/WeAreNetflix';
+import Home from '../app/views/Home';
 
-export default Setup(WeAreNetflix);
+export default Setup(Home);
