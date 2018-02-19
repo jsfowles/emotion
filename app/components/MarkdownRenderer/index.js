@@ -11,9 +11,12 @@ import {
   P,
   Ul,
   Li,
+  Strong,
   Hr,
   TextWrapper,
 } from './styles';
+
+import CodeBlock from '@containers/CodeBlock';
 
 const Headers = ({ level, children }) => {
   const levels = {
@@ -39,6 +42,8 @@ export default ({ source }) => (
         list: ({ ordered, children}) => <Ul>{ children }</Ul>,
         listItem: ({ children }) => <Li>{ children }</Li>,
         thematicBreak: () => <Hr />,
+        strong: ({ children }) => <Strong>{ children }</Strong>,
+        code: CodeBlock,
       }}
     />
   </TextWrapper>

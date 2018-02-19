@@ -1,4 +1,5 @@
 {
+  "name": "Belly",
   "scripts": {
     "dev": "next",
     "build": "next build",
@@ -6,6 +7,9 @@
     "lint": "./node_modules/.bin/eslint ./app",
     "jest": "jest",
     "test": "npm run lint && npm run jest"
+  },
+  "now": {
+    "alias": "belly"
   },
   "dependencies": {
     "@zeit/next-css": "^0.0.7",
@@ -17,6 +21,7 @@
     "express": "^4.15.3",
     "glamor": "^2.20.25",
     "glamorous": "^3.23.4",
+    "highlight.js": "^9.12.0",
     "immutable": "^3.8.1",
     "markdown-loader": "^2.0.2",
     "next": "5.0.0",
