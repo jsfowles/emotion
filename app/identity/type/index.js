@@ -1,5 +1,15 @@
 import glamorous from 'glamorous';
-import { TYPE_SCALE, DESKTOP, DESKTOP_HD } from '@identity/constants';
+
+import {
+  TYPE_SCALE,
+  DESKTOP,
+  DESKTOP_HD,
+  MEASURE,
+  FONT_COLOR_BASE,
+} from '@identity/constants';
+
+import * as s from '@identity/spacing';
+import { remCalc } from '@lib/helperMethods';
 
 const typeMapper = scale => (
   // First we need to map over the keys of the scale and reduce them to
@@ -13,17 +23,31 @@ const typeMapper = scale => (
     // Take the new element and start building it. Since it will start
     // as a capitalized element, lowercase it and then add the font sizes
     // for DESKTOP and DESKTOP_HD.
-    [el]: glamorous[el.toLowerCase()]({
-      fontSize: scale[el].BASE,
+    [el]: glamorous[el.toLowerCase()](
+      ({ spacing }) => spacing && s.spacing(spacing),
+      ({ color }) => ({ color: color || FONT_COLOR_BASE }),
+      ({ fontWeight }) => ({ fontWeight: fontWeight || scale[el].FONT_WEIGHT }),
+      ({ fontFamily }) => ({ fontFamily: fontFamily || scale[el].FONT_FAMILY }),
+      ({ lineHeight }) => ({ lineHeight: lineHeight || scale[el].LINE_HEIGHT }),
+      {
+        fontSize: remCalc(scale[el].BASE),
 
-      [DESKTOP]: {
-        fontSize: scale[el].DESKTOP,
-      },
+        [DESKTOP]: {
+          fontSize: remCalc(scale[el].DESKTOP),
+        },
 
-      [DESKTOP_HD]: {
-        fontSize: scale[el].DESKTOP_HD,
+        [DESKTOP_HD]: {
+          fontSize: remCalc(scale[el].DESKTOP_HD),
+        },
       },
-    }),
+      ({ measure }) => ({
+        width: '100%',
+
+        [DESKTOP]: {
+          maxWidth: MEASURE[`${measure && measure.toUpperCase()}`] || MEASURE.MEDIUM,
+        },
+      }),
+    ),
   }), {})
 );
 

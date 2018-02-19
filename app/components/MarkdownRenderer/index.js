@@ -1,28 +1,46 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 
-import TypeScale from '@identity/type';
+import {
+  H1,
+  H2,
+  H3,
+  H4,
+  H5,
+  H6,
+  P,
+  Ul,
+  Li,
+  Hr,
+  TextWrapper,
+} from './styles';
 
 const Headers = ({ level, children }) => {
   const levels = {
-    1: <TypeScale.H1>{ children }</TypeScale.H1>,
-    2: <TypeScale.H2>{ children }</TypeScale.H2>,
-    3: <TypeScale.H3>{ children }</TypeScale.H3>,
-    4: <TypeScale.H4>{ children }</TypeScale.H4>,
-    5: <TypeScale.H5>{ children }</TypeScale.H5>,
-    6: <TypeScale.H6>{ children }</TypeScale.H6>,
+    1: <H1>{ children }</H1>,
+    2: <H2>{ children }</H2>,
+    3: <H3>{ children }</H3>,
+    4: <H4>{ children }</H4>,
+    5: <H5>{ children }</H5>,
+    6: <H6>{ children }</H6>,
   };
 
   return levels[level] || levels['1'];
 };
 
 export default ({ source }) => (
-  <ReactMarkdown
-    source={ source }
-    renderers={{
-      heading: Headers,
-      paragraph: ({ children }) => <TypeScale.P>{ children }</TypeScale.P>,
-    }}
-  />
+  <TextWrapper>
+    <ReactMarkdown
+      source={ source }
+      renderers={{
+        heading: Headers,
+        paragraph: ({ children }) => <P>{ children }</P>,
+        link: ({ href, children }) => <a href={ href }>{ children }</a>,
+        list: ({ ordered, children}) => <Ul>{ children }</Ul>,
+        listItem: ({ children }) => <Li>{ children }</Li>,
+        thematicBreak: () => <Hr />,
+      }}
+    />
+  </TextWrapper>
 );
 

@@ -1,8 +1,8 @@
 import { fromJS } from 'immutable';
 
-import { remCalc } from '../lib/styleMethods';
-import * as c from './constants';
-import { capitalize } from '../lib/string';
+import { remCalc } from '@lib/helperMethods';
+import * as c from '@identity/constants';
+import { capitalize } from '@lib/strings';
 
 const spacingScale = {
   XS_MOBILE: remCalc(c.X_SMALL_MOBILE),

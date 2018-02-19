@@ -1,35 +1,17 @@
 /*
  * Colors:
  */
-export const colors = {
-  // Primary Colors
-  pacificBlue: '#0094ca',
-  irisBlue: '#00b5e2',
-  deepSkyBlue: '#0cc7f5',
-  summerSky: '#35CAEF',
+export const COLORS = {
+  black001: '#1d252d',
+  black002: '#333f48',
+  black003: '#5b6770',
+  black004: '#7c878e',
+  black005: '#8d96a0',
+  black006: '#bbc5cf',
+  black007: '#cdd7e1',
+  black008: '#d9e1e9',
+  black009: '#f3f7fa',
 
-  persianGreen2: '#03a39c',
-  persianGreen: '#00b2a9',
-  mediumTurquoise: '#4ac7c1',
-
-  tahitiGold: '#eb6d27',
-  burntOrange: '#ff8038',
-  atomicTangerine: '#ff985d',
-
-  cardinal: '#c20431',
-  crimson: '#d50032',
-  crimson2: '#e80e41',
-
-  // Grey Tones
-  blueCharcoal: '#1d252d',
-  bigStone: '#333f48',
-  shuttleGrey: '#5b6770',
-  aluminium: '#7c878e',
-  baliHai: '#8d96a0',
-  spindle: '#bbc5cf',
-  linkWater: '#cdd7e1',
-  pattensBlue: '#d9e1e9',
-  aliceBlue: '#f3f7fa',
   white: '#ffffff',
 };
 
@@ -76,7 +58,7 @@ export const DESKTOP_HD = '@media (min-width: 1440px)';
 export const FONT_FAMILY_SANS_SERIF = 'Gotham, “Helvetica Neue”, Helvetica, Arial, sans-serif';
 export const FONT_FAMILY_SERIF = '"Courier New", monospace, serif';
 export const FONT_FAMILY_BASE = FONT_FAMILY_SANS_SERIF;
-export const FONT_COLOR_BASE = colors.bigStone;
+export const FONT_COLOR_BASE = COLORS.black002;
 
 export const FONT_COLOR_MUTED = '#666';
 
@@ -84,63 +66,106 @@ export const FONT_WEIGHT_LIGHT = 300;
 export const FONT_WEIGHT_NORMAL = 500;
 export const FONT_WEIGHT_BOLD = 600;
 
-export const MEASURE_SMALL = '35rem';
-export const MEASURE_MEDIUM = '45rem';
-export const MEASURE_LARGE = '85rem';
+// TODO: Write documentation arond this
+export const MEASURE = {
+  SMALL: '35rem',
+  MEDIUM: '45rem',
+  LARGE: '85rem',
+};
 
 export const LINE_HEIGHT_BASE = 1.75;
 export const FONT_WEIGHT_BASE = FONT_WEIGHT_LIGHT;
 
 export const LINE_HEIGHT_HEADINGS = 1.32;
 export const FONT_FAMILY_HEADINGS = FONT_FAMILY_BASE;
-export const FONT_WEIGHT_HEADINGS = FONT_WEIGHT_BOLD;
+export const FONT_WEIGHT_HEADINGS = FONT_WEIGHT_NORMAL;
 export const FONT_COLOR_HEADINGS = FONT_COLOR_BASE;
 
+// TODO: Write documentation arond this
 export const TYPE_SCALE = {
   H1: {
     BASE: 36,
     DESKTOP: 40,
-    DESKTO_HD: 44,
+    DESKTOP_HD: 44,
+    LINE_HEIGHT: LINE_HEIGHT_HEADINGS,
+    FONT_FAMILY: FONT_FAMILY_HEADINGS,
+    FONT_WEIGHT: FONT_WEIGHT_HEADINGS,
   },
 
   H2: {
     BASE: 27,
     DESKTOP: 30,
-    DESKTO_HD: 33,
+    DESKTOP_HD: 33,
+    LINE_HEIGHT: LINE_HEIGHT_HEADINGS,
+    FONT_FAMILY: FONT_FAMILY_HEADINGS,
+    FONT_WEIGHT: FONT_WEIGHT_HEADINGS,
   },
 
   H3: {
     BASE: 24,
     DESKTOP: 27,
-    DESKTO_HD: 29,
+    DESKTOP_HD: 29,
+    LINE_HEIGHT: LINE_HEIGHT_HEADINGS,
+    FONT_FAMILY: FONT_FAMILY_HEADINGS,
+    FONT_WEIGHT: FONT_WEIGHT_HEADINGS,
   },
 
   H4: {
     BASE: 21,
     DESKTOP: 23,
-    DESKTO_HD: 26,
+    DESKTOP_HD: 26,
+    LINE_HEIGHT: LINE_HEIGHT_HEADINGS,
+    FONT_FAMILY: FONT_FAMILY_HEADINGS,
+    FONT_WEIGHT: FONT_WEIGHT_HEADINGS,
   },
 
   H5: {
     BASE: 18,
     DESKTOP: 20,
-    DESKTO_HD: 22,
+    DESKTOP_HD: 22,
+    LINE_HEIGHT: LINE_HEIGHT_HEADINGS,
+    FONT_FAMILY: FONT_FAMILY_HEADINGS,
+    FONT_WEIGHT: FONT_WEIGHT_HEADINGS,
+  },
+
+  H6: {
+    BASE: 18,
+    DESKTOP: 20,
+    DESKTOP_HD: 22,
+    LINE_HEIGHT: LINE_HEIGHT_HEADINGS,
+    FONT_FAMILY: FONT_FAMILY_HEADINGS,
+    FONT_WEIGHT: FONT_WEIGHT_HEADINGS,
   },
 
   P: {
     BASE: 18,
     DESKTOP: 20,
-    DESKTO_HD: 22,
+    DESKTOP_HD: 22,
+    LINE_HEIGHT: LINE_HEIGHT_BASE,
+    FONT_FAMILY: FONT_FAMILY_BASE,
+    FONT_WEIGHT: FONT_WEIGHT_BASE,
+  },
+
+  Li: {
+    BASE: 18,
+    DESKTOP: 20,
+    DESKTOP_HD: 22,
+    LINE_HEIGHT: LINE_HEIGHT_BASE,
+    FONT_FAMILY: FONT_FAMILY_BASE,
+    FONT_WEIGHT: FONT_WEIGHT_BASE,
   },
 
   SMALL: {
     BASE: 15,
     DESKTOP: 15,
-    DESKTO_HD: 17,
+    DESKTOP_HD: 17,
+    LINE_HEIGHT: LINE_HEIGHT_BASE,
+    FONT_FAMILY: FONT_FAMILY_BASE,
+    FONT_WEIGHT: FONT_WEIGHT_BASE,
   },
 };
 
-export const BORDER_COLOR = colors.spindle;
+export const BORDER_COLOR = COLORS.spindle;
 
 export const ABSOLUTE = {
   position: 'absolute',
