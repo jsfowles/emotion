@@ -2,18 +2,34 @@
  * Colors:
  */
 export const colors = {
-  nfBlack: '#221f1f',
-  nfRed: '#e50914',
-  nfTan: '#f5f5f1',
+  // Primary Colors
+  pacificBlue: '#0094ca',
+  irisBlue: '#00b5e2',
+  deepSkyBlue: '#0cc7f5',
+  summerSky: '#35CAEF',
 
-  black001: '#221F1F',
-  black002: '#424040',
-  black003: '#696868',
-  black004: '#8c8c8c',
-  black005: '#a6a6a6',
-  black006: '#c7c7c7',
-  black007: '#dbdbdb',
-  black008: '#ebebeb',
+  persianGreen2: '#03a39c',
+  persianGreen: '#00b2a9',
+  mediumTurquoise: '#4ac7c1',
+
+  tahitiGold: '#eb6d27',
+  burntOrange: '#ff8038',
+  atomicTangerine: '#ff985d',
+
+  cardinal: '#c20431',
+  crimson: '#d50032',
+  crimson2: '#e80e41',
+
+  // Grey Tones
+  blueCharcoal: '#1d252d',
+  bigStone: '#333f48',
+  shuttleGrey: '#5b6770',
+  aluminium: '#7c878e',
+  baliHai: '#8d96a0',
+  spindle: '#bbc5cf',
+  linkWater: '#cdd7e1',
+  pattensBlue: '#d9e1e9',
+  aliceBlue: '#f3f7fa',
   white: '#ffffff',
 };
 
@@ -60,7 +76,7 @@ export const DESKTOP_HD = '@media (min-width: 1440px)';
 export const FONT_FAMILY_SANS_SERIF = 'Gotham, “Helvetica Neue”, Helvetica, Arial, sans-serif';
 export const FONT_FAMILY_SERIF = '"Courier New", monospace, serif';
 export const FONT_FAMILY_BASE = FONT_FAMILY_SANS_SERIF;
-export const FONT_COLOR_BASE = colors.black001;
+export const FONT_COLOR_BASE = colors.bigStone;
 
 export const FONT_COLOR_MUTED = '#666';
 
@@ -80,51 +96,49 @@ export const FONT_FAMILY_HEADINGS = FONT_FAMILY_BASE;
 export const FONT_WEIGHT_HEADINGS = FONT_WEIGHT_BOLD;
 export const FONT_COLOR_HEADINGS = FONT_COLOR_BASE;
 
-// h1 Hero
-export const H1_HERO_DESKTOP_HD_FONT_SIZE = 66;
-export const H1_HERO_DESKTOP_FONT_SIZE = 60;
-export const H1_HERO_MOBILE_FONT_SIZE = 54;
-export const H1_HERO_FONT_WEIGHT = FONT_WEIGHT_HEADINGS;
+export const TYPE_SCALE = {
+  H1: {
+    BASE: 36,
+    DESKTOP: 40,
+    DESKTO_HD: 44,
+  },
 
-// h1
-export const H1_DESKTOP_HD_FONT_SIZE = 44;
-export const H1_DESKTOP_FONT_SIZE = 40;
-export const H1_MOBILE_FONT_SIZE = 36;
-export const H1_FONT_WEIGHT = FONT_WEIGHT_HEADINGS;
+  H2: {
+    BASE: 27,
+    DESKTOP: 30,
+    DESKTO_HD: 33,
+  },
 
-// h2
-export const H2_DESKTOP_HD_FONT_SIZE = 33;
-export const H2_DESKTOP_FONT_SIZE = 30;
-export const H2_MOBILE_FONT_SIZE = 27;
-export const H2_FONT_WEIGHT = FONT_WEIGHT_HEADINGS;
+  H3: {
+    BASE: 24,
+    DESKTOP: 27,
+    DESKTO_HD: 29,
+  },
 
-// h3
-export const H3_DESKTOP_HD_FONT_SIZE = 29;
-export const H3_DESKTOP_FONT_SIZE = 27;
-export const H3_MOBILE_FONT_SIZE = 24;
-export const H3_FONT_WEIGHT = FONT_WEIGHT_HEADINGS;
+  H4: {
+    BASE: 21,
+    DESKTOP: 23,
+    DESKTO_HD: 26,
+  },
 
-// h4
-export const H4_DESKTOP_HD_FONT_SIZE = 26;
-export const H4_DESKTOP_FONT_SIZE = 23;
-export const H4_MOBILE_FONT_SIZE = 21;
-export const H4_FONT_WEIGHT = FONT_WEIGHT_HEADINGS;
+  H5: {
+    BASE: 18,
+    DESKTOP: 20,
+    DESKTO_HD: 22,
+  },
 
-// h5
-export const H5_DESKTOP_HD_FONT_SIZE = 22;
-export const H5_DESKTOP_FONT_SIZE = 20;
-export const H5_MOBILE_FONT_SIZE = 18;
-export const H5_FONT_WEIGHT = FONT_WEIGHT_HEADINGS;
+  P: {
+    BASE: 18,
+    DESKTOP: 20,
+    DESKTO_HD: 22,
+  },
 
-// p
-export const P_DESKTOP_HD_FONT_SIZE = 22;
-export const P_DESKTOP_FONT_SIZE = 20;
-export const P_MOBILE_FONT_SIZE = 18;
-
-// small
-export const SMALL_DESKTOP_HD_FONT_SIZE = 17;
-export const SMALL_DESKTOP_FONT_SIZE = 15;
-export const SMALL_MOBILE_FONT_SIZE = 15;
+  SMALL: {
+    BASE: 15,
+    DESKTOP: 15,
+    DESKTO_HD: 17,
+  },
+};
 
 export const BORDER_COLOR = colors.spindle;
 
