@@ -6,7 +6,7 @@ import { Main } from '@identity/wrappers';
 import README from '../../../README.md';
 
 export default () => (
-  <Main spacing={{ padding: 'vertical-xl' }}>
+  <Main spacing={{ padding: 'vertical-lg' }}>
     <MarkdownRenderer source={ README } />
   </Main>
 );

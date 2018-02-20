@@ -13,6 +13,9 @@ export const COLORS = {
   black009: '#f3f7fa',
 
   white: '#ffffff',
+
+  brandPrimary: '#00b5e2',
+  brandSecondary: '#35caef',
 };
 
 /*
@@ -181,4 +184,10 @@ export const FIXED = {
   left: 0,
   width: '100%',
   height: '100%',
+};
+
+export const ANIMATION = {
+  timing: 'cubic-bezier(0.23, 1, 0.32, 1)',
+  durationShort: '200ms',
+  durationLong: '700ms',
 };

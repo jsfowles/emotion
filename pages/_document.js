@@ -35,6 +35,7 @@ export default class MyDocument extends Document {
           <style dangerouslySetInnerHTML={{ __html: this.props.css }} />
           <link rel="manifest" href="/static/manifest.json" />
           <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon" />
+          <title>Belly</title>
         </Head>
 
         <body>

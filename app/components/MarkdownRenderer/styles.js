@@ -57,6 +57,26 @@ export const Strong = glamorous.strong({
   fontWeight: FONT_WEIGHT_NORMAL,
 });
 
+export const Blockquote = glamorous.blockquote(
+  spacingCalculator.spacing({ margin: 'bottom-md' }),
+  {
+    borderLeft: `4px solid ${COLORS.black007}`,
+    paddingLeft: remCalc(20),
+    maxWidth: `calc(${MEASURE.MEDIUM} - ${remCalc(24)})`,
+
+    '& p': {
+      color: COLORS.black003,
+    },
+  },
+);
+
+export const Code = glamorous.code({
+  background: COLORS.black009,
+  color: COLORS.black001,
+  fontSize: remCalc(17),
+  padding: `${remCalc(3)} ${remCalc(4)}`,
+});
+
 export const Hr = glamorous.hr(
   spacingCalculator.spacing({ margin: 'bottom-md' }),
   {

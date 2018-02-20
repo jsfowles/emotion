@@ -103,8 +103,9 @@ svg {
 }
 
 pre {
-  width: 45rem;
   margin-bottom: 2.06rem;
+  width: 100%;
+  white-space: pre-wrap
 }
 
 code {
@@ -188,10 +189,4 @@ code {
 
 .hljs-link {
   text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-  pre {
-    width: 100%;
-  }
 }

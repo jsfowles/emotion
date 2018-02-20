@@ -12,11 +12,14 @@ import {
   Ul,
   Li,
   Strong,
+  Blockquote,
+  Code,
   Hr,
   TextWrapper,
 } from './styles';
 
 import CodeBlock from '@containers/CodeBlock';
+import TextLink from '@components/TextLink';
 
 const Headers = ({ level, children }) => {
   const levels = {
@@ -38,12 +41,16 @@ export default ({ source }) => (
       renderers={{
         heading: Headers,
         paragraph: ({ children }) => <P>{ children }</P>,
-        link: ({ href, children }) => <a href={ href }>{ children }</a>,
+        link: ({ href, children }) => (
+          <TextLink href={ href } text={ children } />
+        ),
         list: ({ ordered, children}) => <Ul>{ children }</Ul>,
         listItem: ({ children }) => <Li>{ children }</Li>,
         thematicBreak: () => <Hr />,
         strong: ({ children }) => <Strong>{ children }</Strong>,
+        blockquote: ({ children }) => <Blockquote>{ children }</Blockquote>,
         code: CodeBlock,
+        inlineCode: ({ children }) => <Code>{ children }</Code>,
       }}
     />
   </TextWrapper>
