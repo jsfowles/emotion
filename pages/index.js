@@ -1,4 +1,7 @@
 import Setup from '@containers/Setup';
-import Home from '@views/Home';
+import View from '@views/Home';
 
-export default Setup(Home);
+export default Setup({
+  View,
+  request: '/api/home',
+});

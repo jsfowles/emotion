@@ -6,6 +6,8 @@ const bodyParser = require('body-parser');
 const CORS = require('cors');
 const routes = require('./routes');
 
+const homeController = require('./controllers/homeController');
+
 require('dotenv').load();
 
 const { PORT, NODE_ENV } = process.env;
@@ -24,6 +26,9 @@ app
     server.use(bodyParser.urlencoded({ extended: true }));
     server.use(bodyParser.json());
     server.use(CORS());
+
+    server.get('/api/home', homeController.getHome);
+    server.get('/graphql', homeController.getHome);
 
     server.use(handler);
     server.listen(port, () => {

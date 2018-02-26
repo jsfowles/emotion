@@ -6,7 +6,7 @@ possible. It is developed and maintained by the team at Underbelly Creative.
 ## Getting Started
 First off you need to have Yarn and Node.js on your computer. Yarn is a package manager for your code. Node.js is an open-source, cross-platform JavaScript run-time environment for executing JavaScript code server-side.
 
-To install the needed dependencies we recommend using Thoughtbot's laptop setup script. It will install Node, Yarn and a bunch of other very useful dev tools. You can find the instructions [here](https://github.com/thoughtbot/laptop).
+To install the needed dependencies we recommend using Thoughtbot's laptop setup script. It will install Node, Yarn and a bunch of other very useful dev tools. You can find the instructions [here](https://github.com/thoughtbot/laptop#install).
 
 After that is installed lets get everything running!
 
@@ -20,6 +20,8 @@ $ git clone git@github.com:underbelly/belly.git PROJECT_NAME
 $ git remote remove origin
 
 # Add a new Github repository. If you havent created one yet go to here https://github.com/new.
+#
+# This is optional.
 $ git remote add origin PROJECT_NAME
 
 # Rename the project throughout the App
