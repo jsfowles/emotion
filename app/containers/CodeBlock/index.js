@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import hljs from 'highlight.js';
 
+import TypeScale from '@identity/type';
+
 export default class CodeBlock extends React.PureComponent {
   static defaultProps = {
     language: '',
@@ -29,12 +31,13 @@ export default class CodeBlock extends React.PureComponent {
   }
 
   render() {
+    console.log(TypeScale);
     return (
-      <pre>
+      <TypeScale.Pre>
         <code ref={ this.setRef } className={ this.props.language }>
-          {this.props.value}
+          { this.props.value }
         </code>
-      </pre>
+      </TypeScale.Pre>
     );
   }
 }

@@ -158,6 +158,8 @@ export const TYPE_SCALE = {
     FONT_WEIGHT: FONT_WEIGHT_BASE,
   },
 
+  Pre: {},
+
   SMALL: {
     BASE: 15,
     DESKTOP: 15,

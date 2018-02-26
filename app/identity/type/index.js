@@ -30,14 +30,14 @@ const typeMapper = scale => (
       ({ fontFamily }) => ({ fontFamily: fontFamily || scale[el].FONT_FAMILY }),
       ({ lineHeight }) => ({ lineHeight: lineHeight || scale[el].LINE_HEIGHT }),
       {
-        fontSize: remCalc(scale[el].BASE),
+        fontSize: scale[el].BASE && remCalc(scale[el].BASE),
 
         [DESKTOP]: {
-          fontSize: remCalc(scale[el].DESKTOP),
+          fontSize: scale[el].DESKTOP && remCalc(scale[el].DESKTOP),
         },
 
         [DESKTOP_HD]: {
-          fontSize: remCalc(scale[el].DESKTOP_HD),
+          fontSize: scale[el].DESKTOP_HD && remCalc(scale[el].DESKTOP_HD),
         },
       },
       ({ measure }) => ({
