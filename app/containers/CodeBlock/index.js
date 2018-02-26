@@ -31,7 +31,6 @@ export default class CodeBlock extends React.PureComponent {
   }
 
   render() {
-    console.log(TypeScale);
     return (
       <TypeScale.Pre>
         <code ref={ this.setRef } className={ this.props.language }>

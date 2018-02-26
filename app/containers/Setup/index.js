@@ -1,30 +1,40 @@
 import React from 'react';
 import axios from 'axios';
 
-export default (
-  Component,
-) => class extends React.Component {
+export default ({
+  View,
+  title,
+  request,
+  options,
+}) => class extends React.Component {
   static async getInitialProps({ req, query }) {
-    const isServer = !!req;
+    // TODO: This fails when requesting from a load balancer, for example it needs to make a request
+    // internally, http://localhost:3000/ but it sees the request as external, https://underbelly.is.
+    // Zeit recommends that you setup 2 endpoints to solve this.
+    //
+    // If we don't go to setting up 2 endpoints we should probably pass the host url's into the
+    // ENV variables.
+    const url = req ? `${req.protocol}://${req.get('Host')}` : '';
 
-    console.log('getInitialProps called:', isServer ? 'server' : 'client')
+    // TODO: Previously we had `res.data`, I am not 100% sure why. Maybe it was to make a external
+    // request (not to the internal node server) and merge it? I doubt it though.
+    const { data } = request ? await axios.get(`${url}${request}`) : { data: null };
 
-    if (isServer) {
-      // When being rendered server-side, we have access to our data in query that we put there in
-      // routes/item.js, saving us an http call. Note that if we were to try to
-      // require('../operations/get-item') here, it would result in a webpack error.
-      return { item: query.itemData };
-    } else {
-      // On the client, we should fetch the data remotely
-      const res = await axios({
-        method: 'get',
-        url: '/_data/item',
-      });
-      return { item: res };
-    }
+    return {
+      data,
+      title: query.slug || title,
+      query,
+      options,
+    };
   }
 
   render() {
-    return <Component { ...this.props } />;
+    return (
+      <React.Fragment>
+        <nav />
+        <View { ...this.props } />
+        <footer />
+      </React.Fragment>
+    );
   }
 };
