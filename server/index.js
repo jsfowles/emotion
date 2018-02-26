@@ -28,6 +28,7 @@ app
     server.use(CORS());
 
     server.get('/api/home', homeController.getHome);
+    server.get('/graphql', homeController.getHome);
 
     server.use(handler);
     server.listen(port, () => {
