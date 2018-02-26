@@ -4,6 +4,19 @@
     "next/babel"
   ],
   "plugins": [
-    ["transform-define"]
+    ["transform-define"],
+    [
+     "module-resolver",
+     {
+      "root": ["./"],
+      "alias": {
+        "@components": "./app/components",
+        "@containers": "./app/containers",
+        "@identity": "./app/identity",
+        "@lib": "./app/lib",
+        "@views": "./app/views"
+      },
+     },
+    ],
   ]
 }

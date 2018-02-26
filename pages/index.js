@@ -1,4 +1,4 @@
-import Setup from '../app/containers/Setup';
-import Home from '../app/views/Home';
+import Setup from '@containers/Setup';
+import Home from '@views/Home';
 
 export default Setup(Home);

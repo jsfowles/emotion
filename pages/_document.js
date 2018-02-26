@@ -7,7 +7,7 @@ import Document, {
   NextScript,
 } from 'next/document';
 
-import './styles/styles.css';
+import stylesheet from './styles/styles.css';
 
 export default class MyDocument extends Document {
   static async getInitialProps({ renderPage }) {
@@ -30,9 +30,12 @@ export default class MyDocument extends Document {
         <Head>
           <meta charSet="utf-8" />
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-          <link rel="stylesheet" href="/_next/static/style.css" />
+          <meta name="theme-color" content="#000" />
+          <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
           <style dangerouslySetInnerHTML={{ __html: this.props.css }} />
+          <link rel="manifest" href="/static/manifest.json" />
           <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon" />
+          <title>Belly</title>
         </Head>
 
         <body>
