@@ -59,7 +59,6 @@ function startServer(client, schema) {
     .catch((err) => {
       console.log('An error occurred, unable to start the server');
       console.log(err);
->>>>>>> graphql
     });
 }
 
