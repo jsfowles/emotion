@@ -23,10 +23,11 @@ app
     server = express();
     server.use(redirectHttps([ /localhost:(\d{4})/ ]));
 
-    // withGraphiQL(server);
-    // withGraphQL(server);
+    withGraphiQL(server);
+    withGraphQL(server);
 
-    server.use(handler);
+    server.get('*', (req, res) => handler(req, res));
+
     server.use(bodyParser.urlencoded({ extended: true }));
     server.use(bodyParser.json());
     server.use(CORS());
@@ -38,11 +39,3 @@ app
     console.log('An error occurred, unable to start the server');
     console.log(err);
   });
-
-const graphql = express();
-withGraphiQL(graphql);
-withGraphQL(graphql);
-graphql.use(CORS());
-graphql.listen(3001, () => {
-  console.log(`==> Belly listening on port ${port}`);
-});
