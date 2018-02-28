@@ -11,10 +11,13 @@
   "now": {
     "alias": "belly"
   },
-  "jest":{
+  "jest": {
     "coverageDirectory": "./.coverage",
     "testPathIgnorePatterns": [
       "/node_modules/"
+    ],
+    "setupFiles": [
+      "<rootDir>/util/beforeTests.js"
     ]
   },
   "dependencies": {
@@ -49,6 +52,8 @@
   "devDependencies": {
     "babel-eslint": "^7.2.3",
     "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.1",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.0.1",
     "eslint-import-resolver-babel-module": "^4.0.0",
