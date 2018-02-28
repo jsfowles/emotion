@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CodeBlock renders props 1`] = `
+<CodeBlock
+  language="js"
+  value="
+  console.log(\\"hello world\\");
+  "
+>
+  <glamorous(pre)>
+    <pre
+      className="css-drwtoh"
+    >
+      <code
+        className="js"
+      >
+        
+  console.log("hello world");
+  
+      </code>
+    </pre>
+  </glamorous(pre)>
+</CodeBlock>
+`;

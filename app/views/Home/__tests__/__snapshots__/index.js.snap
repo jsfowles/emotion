@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home View renders without any props 1`] = `
+<glamorous(main)
+  spacing={
+    Object {
+      "padding": "vertical-lg",
+    }
+  }
+>
+  <Component
+    source="Hello World"
+  />
+</glamorous(main)>
+`;
