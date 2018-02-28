@@ -42,7 +42,7 @@ export default ({ source }) => (
         heading: Headers,
         paragraph: ({ children }) => <P>{ children }</P>,
         link: ({ href, children }) => <TextLink href={ href } text={ children[0] } />,
-        list: ({ ordered, children}) => <Ul>{ children }</Ul>,
+        list: ({ ordered, children }) => <Ul>{ children }</Ul>,
         listItem: ({ children }) => <Li>{ children }</Li>,
         thematicBreak: () => <Hr />,
         strong: ({ children }) => <Strong>{ children }</Strong>,
