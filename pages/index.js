@@ -3,8 +3,7 @@ import gql from 'graphql-tag';
 import { graphql } from 'react-apollo';
 
 import withData from '../lib/withData';
-import Setup from '@containers/Setup';
-import View from '@views/Raw';
+import View from '@views/Home';
 
 export default withData(() => (
   <React.Fragment>
