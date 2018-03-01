@@ -3,11 +3,12 @@ import PropTypes from 'prop-types';
 
 import { A } from './styles';
 
-const TextLink = ({ href, text, internal }) => (internal ? (
-  null // TODO: Setup <Link />
-) : (
-  <A href={ href } target="_blank">{ text }</A>
-));
+const TextLink = ({ href, text, internal }) =>
+  internal ? null : ( // TODO: Setup <Link />
+    <A href={ href } target="_blank">
+      {text}
+    </A>
+  );
 
 TextLink.propTypes = {
   href: PropTypes.string,

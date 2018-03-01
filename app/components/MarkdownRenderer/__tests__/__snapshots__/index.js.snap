@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders with props 1`] = `
+<glamorous(glamorous(div))>
+  <ReactMarkdown
+    escapeHtml={true}
+    renderers={
+      Object {
+        "blockquote": [Function],
+        "code": [Function],
+        "heading": [Function],
+        "inlineCode": [Function],
+        "link": [Function],
+        "list": [Function],
+        "listItem": [Function],
+        "paragraph": [Function],
+        "strong": [Function],
+        "thematicBreak": [Function],
+      }
+    }
+    skipHtml={false}
+    source="
+# Hello World
+
+Goto [Underbelly](https://underbelly.is)
+"
+    transformLinkUri={[Function]}
+  />
+</glamorous(glamorous(div))>
+`;

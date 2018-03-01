@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextLink renders with default props 1`] = `
+<glamorous(a)
+  href="#"
+  target="_blank"
+>
+  Link with no text
+</glamorous(a)>
+`;
+
+exports[`TextLink renders with props 1`] = `
+<glamorous(a)
+  href="https://underbelly.is"
+  target="_blank"
+>
+  Underbelly
+</glamorous(a)>
+`;

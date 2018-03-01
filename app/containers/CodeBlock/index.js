@@ -24,7 +24,7 @@ export default class CodeBlock extends React.PureComponent {
 
   setRef = (el) => {
     this.codeEl = el;
-  }
+  };
 
   highlightCode() {
     hljs.highlightBlock(this.codeEl);
@@ -34,7 +34,7 @@ export default class CodeBlock extends React.PureComponent {
     return (
       <TypeScale.Pre>
         <code ref={ this.setRef } className={ this.props.language }>
-          { this.props.value }
+          {this.props.value}
         </code>
       </TypeScale.Pre>
     );
