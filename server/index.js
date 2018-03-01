@@ -4,9 +4,9 @@ const redirectHttps = require('express-http-to-https').redirectToHTTPS;
 const next = require('next');
 const bodyParser = require('body-parser');
 const CORS = require('cors');
+const { withGraphiQL, withGraphQL } = require('./graphql');
 const routes = require('./routes');
-
-const homeController = require('./controllers/homeController');
+// const homeController = require('./controllers/homeController');
 
 require('dotenv').load();
 
@@ -15,7 +15,6 @@ const port = parseInt(PORT, 10) || 3000;
 const dev = NODE_ENV !== 'production';
 const app = next({ dev });
 const handler = routes.getRequestHandler(app);
-
 let server;
 
 app
@@ -23,14 +22,15 @@ app
   .then(() => {
     server = express();
     server.use(redirectHttps([ /localhost:(\d{4})/ ]));
+
+    withGraphiQL(server);
+    withGraphQL(server);
+
+    server.get('*', (req, res) => handler(req, res));
+
     server.use(bodyParser.urlencoded({ extended: true }));
     server.use(bodyParser.json());
     server.use(CORS());
-
-    server.get('/api/home', homeController.getHome);
-    server.get('/graphql', homeController.getHome);
-
-    server.use(handler);
     server.listen(port, () => {
       console.log(`==> Belly listening on port ${port}`);
     });
