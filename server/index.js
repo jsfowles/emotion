@@ -21,7 +21,7 @@ app
   .prepare()
   .then(() => {
     server = express();
-    server.use(redirectHttps([], [/\/healthcheck/, /\/graphql/, /\/graphiql/]));
+    server.use(redirectHttps([/localhost:(\d{4})/, /\*.now.sh/]));
 
     withGraphiQL(server);
     withGraphQL(server);
