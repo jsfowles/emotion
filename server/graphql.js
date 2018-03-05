@@ -11,23 +11,25 @@ const withGraphQL = (app) => {
   const cdaToken = process.env.CDA_TOKEN;
   const cmaToken = process.env.CMA_TOKEN;
 
-  const client = cfGraphql.createClient({ spaceId, cdaToken, cmaToken });
-  client
-    .getContentTypes()
-    .then(cfGraphql.prepareSpaceGraph)
-    .then(spaceGraph => spaceGraph)
-    .then(cfGraphql.createSchema)
-    .then((schema) => {
-      app.use(
-        '/graphql',
-        bodyParser.json(),
-        graphqlExpress({
-          tracing: true,
-          schema,
-          context: { entryLoader: client.createEntryLoader() },
-        }),
-      );
-    });
+  if (spaceId && cdaToken && cmaToken) {
+    const client = cfGraphql.createClient({ spaceId, cdaToken, cmaToken });
+    client
+      .getContentTypes()
+      .then(cfGraphql.prepareSpaceGraph)
+      .then(spaceGraph => spaceGraph)
+      .then(cfGraphql.createSchema)
+      .then((schema) => {
+        app.use(
+          '/graphql',
+          bodyParser.json(),
+          graphqlExpress({
+            tracing: true,
+            schema,
+            context: { entryLoader: client.createEntryLoader() },
+          }),
+        );
+      });
+  }
 };
 
 module.exports = {
