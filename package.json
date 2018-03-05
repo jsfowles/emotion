@@ -33,6 +33,7 @@
     "cf-graphql": "^0.5.0",
     "contentful": "^4.5.0",
     "cors": "^2.8.4",
+    "cssnano": "^3.10.0",
     "dotenv": "^4.0.0",
     "express": "^4.15.3",
     "express-graphql": "^0.6.12",
