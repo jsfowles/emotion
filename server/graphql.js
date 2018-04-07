@@ -2,11 +2,11 @@ const { graphqlExpress, graphiqlExpress } = require('apollo-server-express');
 const bodyParser = require('body-parser');
 const cfGraphql = require('cf-graphql');
 
-const withGraphiQL = (app) => {
+const withGraphiQL = app => {
   app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));
 };
 
-const withGraphQL = (app) => {
+const withGraphQL = app => {
   const spaceId = process.env.SPACE_ID;
   const cdaToken = process.env.CDA_TOKEN;
   const cmaToken = process.env.CMA_TOKEN;
@@ -18,7 +18,7 @@ const withGraphQL = (app) => {
       .then(cfGraphql.prepareSpaceGraph)
       .then(spaceGraph => spaceGraph)
       .then(cfGraphql.createSchema)
-      .then((schema) => {
+      .then(schema => {
         app.use(
           '/graphql',
           bodyParser.json(),

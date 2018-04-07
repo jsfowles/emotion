@@ -21,10 +21,10 @@ app
   .prepare()
   .then(() => {
     server = express();
-    server.use(redirectHttps([ /localhost:(\d{4})/ ]));
+    server.use(redirectHttps([/localhost:(\d{4})/]));
 
-    withGraphiQL(server);
-    withGraphQL(server);
+    // withGraphiQL(server);
+    // withGraphQL(server);
 
     server.get('*', (req, res) => handler(req, res));
 
@@ -35,7 +35,7 @@ app
       console.log(`==> Belly listening on port ${port}`);
     });
   })
-  .catch((err) => {
+  .catch(err => {
     console.log('An error occurred, unable to start the server');
     console.log(err);
   });
