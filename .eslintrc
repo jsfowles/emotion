@@ -10,7 +10,6 @@
     "import/extensions": 0,
     "react/no-unused-prop-types": 0,
     "camelcase": 0,
-    "react/jsx-curly-spacing": [ 2, "always", {"spacing": { "objectLiterals": "never" }}],
   },
   "settings":{
     "import/resolver": {
