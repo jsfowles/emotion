@@ -4,38 +4,41 @@ const redirectHttps = require('express-http-to-https').redirectToHTTPS;
 const next = require('next');
 const bodyParser = require('body-parser');
 const CORS = require('cors');
-const { withGraphiQL, withGraphQL } = require('./graphql');
+const { withGraphQL, withGraphiQL } = require('./graphql');
+const { ApolloEngine } = require('apollo-engine');
 const routes = require('./routes');
-// const homeController = require('./controllers/homeController');
 
 require('dotenv').load();
 
-const { PORT, NODE_ENV } = process.env;
+const { PORT, NODE_ENV, APOLLO_ENGINE } = process.env;
 const port = parseInt(PORT, 10) || 3000;
 const dev = NODE_ENV !== 'production';
-const app = next({ dev });
-const handler = routes.getRequestHandler(app);
-let server;
+const nextApp = next({ dev });
+const handler = routes.getRequestHandler(nextApp);
+let expressApp;
 
-app
+const engine = new ApolloEngine({ apiKey: APOLLO_ENGINE });
+
+nextApp
   .prepare()
   .then(() => {
-    server = express();
-    server.use(redirectHttps([/localhost:(\d{4})/, /\*.now.sh/]));
+    expressApp = express();
+    expressApp.use(redirectHttps([/localhost:(\d{4})/]));
 
-    withGraphiQL(server);
-    withGraphQL(server);
+    withGraphQL(expressApp);
+    withGraphiQL(expressApp);
 
-    server.get('*', (req, res) => handler(req, res));
+    expressApp.get('*', (req, res) => handler(req, res));
 
-    server.use(bodyParser.urlencoded({ extended: true }));
-    server.use(bodyParser.json());
-    server.use(CORS());
-    server.listen(port, () => {
+    expressApp.use(bodyParser.urlencoded({ extended: true }));
+    expressApp.use(bodyParser.json());
+    expressApp.use(CORS());
+
+    engine.listen({ port, expressApp }, () => {
       console.log(`==> Belly listening on port ${port}`);
     });
   })
-  .catch((err) => {
+  .catch(err => {
     console.log('An error occurred, unable to start the server');
     console.log(err);
   });

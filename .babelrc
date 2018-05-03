@@ -5,6 +5,7 @@
   ],
   "plugins": [
     ["transform-define"],
+    ["dotenv-import"],
     [
      "module-resolver",
      {

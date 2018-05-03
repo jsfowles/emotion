@@ -1,12 +1,33 @@
 import React from 'react';
-import glamorous from 'glamorous';
+import { graphql } from 'react-apollo';
+import gql from 'graphql-tag';
 
-import MarkdownRenderer from '@components/MarkdownRenderer';
 import { Main } from '@identity/wrappers';
-import README from '../../../README.md';
 
-export default () => (
+const Home = ({ users }) => (
   <Main spacing={{ padding: 'vertical-lg' }}>
-    <MarkdownRenderer source={ README } />
+    <pre>{JSON.stringify(users, null, 2)}</pre>
   </Main>
 );
+
+const query = gql`
+  {
+    allActiveUsers {
+      users {
+        id
+        first_name
+        last_name
+        weekly_capacity
+      }
+    }
+  }
+`;
+
+const withData = graphql(query, {
+  props: ({ data: { loading, allActiveUsers } }) => ({
+    loading,
+    users: allActiveUsers ? allActiveUsers.users : [],
+  }),
+});
+
+export default withData(Home);
