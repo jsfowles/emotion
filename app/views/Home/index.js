@@ -1,13 +1,28 @@
 import React from 'react';
+import TextLoop from 'react-text-loop';
+import ReactRevealText from 'react-reveal-text';
+import { Main, Div, Emotion, Border } from './styles';
 
-import { Main, Div, Emotion } from './styles';
+export default class Home extends React.Component {
+  constructor() {
+    super();
+    this.state = { show: false };
+  }
 
-const Home = () => (
-  <Main>
-    <Div>
-      <Emotion fontSize={'72px'}>Hello World</Emotion>
-    </Div>
-  </Main>
-);
-
-export default Home;
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({ show: true });
+    }, 1000);
+  }
+  render() {
+    return (
+      <Main>
+        <Div>
+          <Border>
+            <Emotion fontSize={'100px'}>Eleanor Ray</Emotion>
+          </Border>
+        </Div>
+      </Main>
+    );
+  }
+}
