@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { Main } from '@identity/wrappers';
-import { Div, Emotion } from './styles';
+import { Main, Div, Emotion } from './styles';
 
 const Home = () => (
-  <Main spacing={{ padding: 'vertical-lg' }}>
-    <Div>Hello World</Div>
-    <Emotion color={'#DA70D6'}>Hello World</Emotion>
+  <Main>
+    <Emotion fontSize={'72px'} color={'#DA70D6'}>
+      Hello World
+    </Emotion>
   </Main>
 );
 
