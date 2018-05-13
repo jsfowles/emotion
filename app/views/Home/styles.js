@@ -1,15 +1,25 @@
-import glamorous from 'glamorous';
-import styled, { css } from 'react-emotion';
+import styled from 'react-emotion';
 
-export const Div = glamorous.h1({
-  color: 'red',
-});
+export const Div = styled('div')(
+  {
+    height: '500px',
+    width: '700px',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'column',
+    border: '1px solid',
+    borderRadius: '15px',
+    borderImageSource: 'linear-gradient(135deg, #ff32f1 0%,#2db6ce 100%)',
+    borderImageSlice: '50',
+  },
+  props => ({ backgroundColor: props.color }),
+);
 
 export const Emotion = styled('h1')(
   {
-    color: 'green',
+    color: 'hotpink',
   },
-  props => ({ backgroundColor: props.color }),
   props => ({ fontSize: props.fontSize }),
 );
 

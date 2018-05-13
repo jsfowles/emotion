@@ -4,9 +4,9 @@ import { Main, Div, Emotion } from './styles';
 
 const Home = () => (
   <Main>
-    <Emotion fontSize={'72px'} color={'#DA70D6'}>
-      Hello World
-    </Emotion>
+    <Div>
+      <Emotion fontSize={'72px'}>Hello World</Emotion>
+    </Div>
   </Main>
 );
 
