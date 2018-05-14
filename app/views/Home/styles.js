@@ -13,8 +13,8 @@ export const Bounce = keyframes`
 `;
 
 export const Border = styled('div')({
-  height: '500px',
-  width: '900px',
+  height: '600px',
+  width: '600px',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
@@ -22,25 +22,27 @@ export const Border = styled('div')({
   background: 'black',
   position: 'relative',
   zIndex: 2,
-  borderRadius: '5px',
+  borderRadius: '50%',
 });
 
 export const Div = styled('div')(
   {
-    background: '#1D1F20',
-    borderWidth: '3px',
+    borderWidth: '10px',
+    background: 'black',
     position: 'relative',
-    borderRadius: '5px',
+    borderRadius: '50%',
+    marginBottom: '25%',
     '&:after': {
+      boxShadow: '0 0 50px hotpink',
       content: '""',
       position: 'absolute',
-      top: 'calc(-1 * 3px)',
-      left: 'calc(-1 * 3px)',
-      height: 'calc(100% + 3px * 2)',
-      width: 'calc(100% + 3px * 2)',
+      top: 'calc(-1 * 10px)',
+      left: 'calc(-1 * 10px)',
+      height: 'calc(100% + 10px * 2)',
+      width: 'calc(100% + 10px * 2)',
       background:
-        'linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82)',
-      borderRadius: 'calc(2 * 3px)',
+        'linear-gradient(60deg, hotpink, #ff0084, #f80759, #5073b8, #1098ad, #07b39b, #6fba82)',
+      borderRadius: '50%',
       zIndex: 1,
       animation: `${Bounce} 3s ease alternate infinite`,
       backgroundSize: '300% 300%',
@@ -55,6 +57,7 @@ export const Emotion = styled('h1')(
     fontFamily: 'Streamster',
     lineHeight: '150px',
     letterSpacing: '4px',
+    paddingRight: '40px',
   },
   props => ({ fontSize: props.fontSize }),
 );
@@ -62,6 +65,9 @@ export const Emotion = styled('h1')(
 export const Main = styled('div')({
   height: '100vh',
   width: '100vw',
+  backgroundImage: 'url("../../static/background.png")',
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
   backgroundColor: 'black',
   display: 'flex',
   justifyContent: 'center',

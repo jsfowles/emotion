@@ -19,7 +19,11 @@ export default class Home extends React.Component {
       <Main>
         <Div>
           <Border>
-            <Emotion fontSize={'100px'}>Eleanor Ray</Emotion>
+            <Emotion fontSize={'150px'}>
+              <ReactRevealText show={this.state.show} delayMin={0}>
+                Leni
+              </ReactRevealText>
+            </Emotion>
           </Border>
         </Div>
       </Main>
