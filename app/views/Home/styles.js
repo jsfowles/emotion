@@ -13,8 +13,8 @@ export const Bounce = keyframes`
 `;
 
 export const Border = styled('div')({
-  height: '600px',
-  width: '600px',
+  width: '100%',
+  height: '100%',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
@@ -25,21 +25,36 @@ export const Border = styled('div')({
   borderRadius: '50%',
 });
 
-export const Div = styled('div')(
+export const Div = styled('div')({
+  position: 'relative',
+  width: '40%',
+  maxWidth: '600px',
+
+  '&:after': {
+    content: '""',
+    display: 'block',
+    paddingBottom: '100%',
+  },
+});
+
+export const Container = styled('div')(
   {
-    borderWidth: '10px',
+    borderWidth: '0.2vw',
     background: 'black',
-    position: 'relative',
+    position: 'absolute',
     borderRadius: '50%',
-    marginBottom: '25%',
+    width: '100%',
+    height: '100%',
+    top: 0,
+    bottom: 0,
     '&:after': {
       boxShadow: '0 0 50px hotpink',
       content: '""',
       position: 'absolute',
-      top: 'calc(-1 * 10px)',
-      left: 'calc(-1 * 10px)',
-      height: 'calc(100% + 10px * 2)',
-      width: 'calc(100% + 10px * 2)',
+      top: 'calc(-1 * 0.2vw)',
+      left: 'calc(-1 * 0.2vw)',
+      height: 'calc(100% + 0.2vw * 2)',
+      width: 'calc(100% + 0.2vw * 2)',
       background:
         'linear-gradient(60deg, hotpink, #ff0084, #f80759, #5073b8, #1098ad, #07b39b, #6fba82)',
       borderRadius: '50%',
@@ -57,7 +72,6 @@ export const Emotion = styled('h1')(
     fontFamily: 'Streamster',
     lineHeight: '150px',
     letterSpacing: '4px',
-    paddingRight: '40px',
   },
   props => ({ fontSize: props.fontSize }),
 );
@@ -65,10 +79,10 @@ export const Emotion = styled('h1')(
 export const Main = styled('div')({
   height: '100vh',
   width: '100vw',
-  backgroundImage: 'url("../../static/background.png")',
+  backgroundImage:
+    'url("https://pre00.deviantart.net/51d4/th/pre/f/2015/322/1/0/the_grid___komodo_upload_02_by_winampers_pro-d9h4oaw.png")',
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  backgroundColor: 'black',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',

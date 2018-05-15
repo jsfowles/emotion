@@ -1,7 +1,6 @@
 import React from 'react';
-import TextLoop from 'react-text-loop';
 import ReactRevealText from 'react-reveal-text';
-import { Main, Div, Emotion, Border } from './styles';
+import { Main, Div, Container, Emotion, Border } from './styles';
 
 export default class Home extends React.Component {
   constructor() {
@@ -18,13 +17,15 @@ export default class Home extends React.Component {
     return (
       <Main>
         <Div>
-          <Border>
-            <Emotion fontSize={'150px'}>
-              <ReactRevealText show={this.state.show} delayMin={0}>
-                Leni
-              </ReactRevealText>
-            </Emotion>
-          </Border>
+          <Container>
+            <Border>
+              <Emotion fontSize={'6vw'}>
+                <ReactRevealText show={this.state.show} delayMin={0}>
+                  Eleanor
+                </ReactRevealText>
+              </Emotion>
+            </Border>
+          </Container>
         </Div>
       </Main>
     );
