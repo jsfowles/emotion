@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'react-emotion';
+import styled, { keyframes, injectGlobal } from 'react-emotion';
 
 export const Bounce = keyframes`
 0% {

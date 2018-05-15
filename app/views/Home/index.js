@@ -2,6 +2,19 @@ import React from 'react';
 import ReactRevealText from 'react-reveal-text';
 import { Main, Div, Container, Emotion, Border } from './styles';
 
+import { injectGlobal } from 'react-emotion';
+
+injectGlobal`
+@font-face {
+  font-family: 'Streamster';
+  src: url('/static/fonts/streamster-webfont.woff');
+  src: url('/static/fonts/streamster-webfont.woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal
+}
+`;
+
 export default class Home extends React.Component {
   constructor() {
     super();

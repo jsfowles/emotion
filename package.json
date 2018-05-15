@@ -1,5 +1,6 @@
 {
   "name": "Belly",
+  "main": "pages/_document.js",
   "scripts": {
     "dev": "node ./server/index.js",
     "build": "next build",
